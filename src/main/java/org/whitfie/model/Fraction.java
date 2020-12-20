@@ -32,7 +32,7 @@ public class Fraction implements Cloneable {
     }
 
     public int getNumerator() {
-        if (valueType == ValueType.NEGATIVE) {
+        if (valueType == ValueType.NEGATIVE && mixed == 0) {
             return 0 - numerator;
         }
 
