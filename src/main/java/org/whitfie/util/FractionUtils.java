@@ -77,7 +77,7 @@ public class FractionUtils {
             fraction.setNumerator(fraction.getAbsNumerator() % fraction.getDenominator());
         }
     }
-    
+
 
 
 

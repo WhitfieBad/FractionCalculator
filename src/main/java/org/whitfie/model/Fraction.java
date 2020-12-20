@@ -99,6 +99,6 @@ public class Fraction implements Cloneable {
             throw new FractionExeption();
         }
 
-        return numerator <= denominator;
+        return numerator < denominator;
     }
 }
