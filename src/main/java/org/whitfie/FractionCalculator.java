@@ -8,9 +8,9 @@ import org.whitfie.model.ValueType;
 public class FractionCalculator {
 
     public static void main(String[] args) throws FractionExeption, CloneNotSupportedException {
-        Fraction fraction = new Fraction(10, 10 , ValueType.NEGATIVE);
-        Fraction fraction1 = new Fraction(15, 37, ValueType.NEGATIVE);
-        Calculate calculate = new Calculate(new Divide());
+        Fraction fraction = new Fraction(0, 0, 3 ,ValueType.NEGATIVE);
+        Fraction fraction1 = new Fraction(0, 0, 5,ValueType.POSITIVE);
+        Calculate calculate = new Calculate(new Subtraction());
         System.out.println(calculate.calculate(fraction, fraction1));
     }
 }

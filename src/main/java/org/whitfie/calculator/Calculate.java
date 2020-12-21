@@ -13,10 +13,12 @@ public class Calculate {
     }
 
     public Fraction calculate(Fraction fraction1, Fraction fraction2) throws FractionExeption, CloneNotSupportedException {
+
         Fraction o1 = (Fraction) fraction1.clone();
         Fraction o2 = (Fraction) fraction2.clone();
 
-        FractionUtils.toOrdinaryFraction(o1, o2);
+        FractionUtils.toOrdinaryFraction(o1);
+        FractionUtils.toOrdinaryFraction(o2);
 
         Fraction result = calculator.calculate(o1, o2);
 

@@ -91,7 +91,7 @@ public class Fraction implements Cloneable {
 
     @Override
     public String toString() {
-        return mixed + "(" + numerator + "/" + denominator + ")";
+        return mixed + "(" + numerator + "/" + denominator + ") " + valueType;
     }
 
     public boolean isCorrectFraction() throws FractionExeption {

@@ -32,20 +32,18 @@ public class FractionUtils {
 
     }
 
-    public static void toOrdinaryFraction(Fraction fraction1, Fraction fraction2) throws FractionExeption {
+    public static void toOrdinaryFraction(Fraction fraction) throws FractionExeption {
 
-        if (fraction1.getMixed() != 0) {
-            fraction1.setNumerator((fraction1.getMixed() * fraction1.getDenominator()) + fraction1.getAbsNumerator());
-            fraction1.setMixed(0);
-
-        }
-
-
-        if (fraction2.getMixed() != 0 ) {
-            fraction2.setNumerator((fraction2.getMixed() * fraction2.getDenominator()) + fraction2.getAbsNumerator());
-            fraction2.setMixed(0);
-        }
-
+       if ((fraction.getNumerator() == 0 && fraction.getDenominator() == 0) && fraction.getMixed() != 0) {
+           fraction.setNumerator(fraction.getMixed());
+           fraction.setDenominator(1);
+           fraction.setMixed(0);
+       } else if (fraction.getMixed() != 0 && (fraction.getNumerator() != 0 && fraction.getDenominator() != 0)) {
+            fraction.setNumerator((fraction.getMixed() * fraction.getDenominator()) + fraction.getAbsNumerator());
+            fraction.setMixed(0);
+        } else {
+           throw new FractionExeption();
+       }
 
     }
 
